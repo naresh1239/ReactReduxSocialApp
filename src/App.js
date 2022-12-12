@@ -7,7 +7,7 @@ import Product from './Product';
 function App() {
   return (
     <Routes>
-    <Route exact path='/' element={< Home />}></Route>
+    <Route exact path='*' element={< Home />}></Route>
     <Route exact path='/cart' element={<Cart/>}></Route>
     <Route exact path='/product/:id' element={<Product/>}></Route>
     <Route exact path='/tst' element={<Tst/>}></Route>
