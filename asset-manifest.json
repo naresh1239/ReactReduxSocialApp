@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ReactReduxSocialApp/static/css/main.564e8ed3.css",
-    "main.js": "/ReactReduxSocialApp/static/js/main.94dac9d8.js",
+    "main.css": "/ReactReduxSocialApp/static/css/main.5e1e9c99.css",
+    "main.js": "/ReactReduxSocialApp/static/js/main.27f9da11.js",
     "static/js/787.6340f289.chunk.js": "/ReactReduxSocialApp/static/js/787.6340f289.chunk.js",
     "index.html": "/ReactReduxSocialApp/index.html",
-    "main.564e8ed3.css.map": "/ReactReduxSocialApp/static/css/main.564e8ed3.css.map",
-    "main.94dac9d8.js.map": "/ReactReduxSocialApp/static/js/main.94dac9d8.js.map",
+    "main.5e1e9c99.css.map": "/ReactReduxSocialApp/static/css/main.5e1e9c99.css.map",
+    "main.27f9da11.js.map": "/ReactReduxSocialApp/static/js/main.27f9da11.js.map",
     "787.6340f289.chunk.js.map": "/ReactReduxSocialApp/static/js/787.6340f289.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.564e8ed3.css",
-    "static/js/main.94dac9d8.js"
+    "static/css/main.5e1e9c99.css",
+    "static/js/main.27f9da11.js"
   ]
 }
