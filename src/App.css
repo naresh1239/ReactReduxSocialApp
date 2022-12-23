@@ -5,6 +5,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     transition: all 0.2s linear ;
     text-decoration: none;
+
     
 }
 body{
@@ -130,4 +131,16 @@ button{
 
   .list .box{
 width: 100%;
+  }
+  .pagination{
+    margin: 10px;
+  }
+  .Active{
+    background-color: rgb(138, 138, 138);
+    color: white;
+  }
+  .pagenationbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }

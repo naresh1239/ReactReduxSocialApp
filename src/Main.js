@@ -10,11 +10,11 @@ const Main = () => {
   
   const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const dispatch = useDispatch()
+  const [pageSize, setpageSize] = useState(1)
   // const addToCart = useDispatch()
   // const removeToCart = useDispatch()
   const result = useSelector((state)=>state.product  )
-const [currentPage, setcurrentPage] = useState(1)
-const [postsPerPage, setpostsPerPage] = useState(5)
+
 let Navigate = useNavigate()
   useEffect(() => {
 
@@ -52,22 +52,41 @@ return (
     <div className={`main-box ${theme}`} >
 
     {
-     result.length > 0  ?  result?.map((e)=>{
+     result.length > 0  ?  result?.slice(pageSize * 10 - 10 , pageSize * 10).map((e)=>{
         return (
+       <>
           <div key={e.id} className="box" onClick={() => porduct(e)} >
           <h3 >{e.title}</h3>
           <h3 >Category : {e.type}</h3>
           <p >{e.description}</p>
-          <img src={e.filename}></img>
+          <img src={e.thumbnail} alt="hel"></img>
      <div style={{display : "flex" , padding: "5px", alignItems : "center"}}>     <p style={{ margin : "10px"}}>Pirce: {e.price}</p>
           <p >Rating: {e.rating}</p></div>
           <button className={'homebtn'} onClick={()=>ADD_TO_CART(e)}> ⚡ ADD PRODUCT</button>
           </div>
+         
+          </>
         )
-      }) : ""
+
+         
+      })  
+      
+      : ""
+
+    
     }
     </div>
-    <button>1</button>     <button>2</button>  <button>3</button>
+
+          {
+            <div className='pagenationbox'>
+                 { pageSize > 1  ?  <button className="pagination" onClick={()=>setpageSize(pageSize - 1)}>Previous</button> : ""}
+             
+                   
+  {  [...Array(Math.floor(result.length / 10 ))].map((e,i)=><button className={`pagination ${pageSize == i + 1 ? "Active" : ""}`} onClick={()=>setpageSize(i + 1)}>{i + 1}</button>)}
+                
+  { pageSize < result.length / 10  ?  <button className="pagination" onClick={()=>setpageSize(pageSize + 1)}>Next</button> : " " }
+    </div>
+          }
     </>
   )
 }
